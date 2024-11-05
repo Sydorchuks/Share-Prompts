@@ -1,4 +1,5 @@
 import '@/styles/globals.css'
+import Nav from '@components/Nav';
 
 import React, { FC } from 'react'
 
@@ -18,11 +19,11 @@ const RootLayout:FC<RootLayoutPrompts> = ({children}) => {
         <body>
             <div className='main'>
                 <div className='gradient' />
-
+            </div>
                 <main className='app'>
+                    <Nav />
                     {children}
                 </main>
-            </div>
         </body>
     </html>
   )
