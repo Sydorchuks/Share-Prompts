@@ -1,8 +1,18 @@
-import React from 'react'
+"use client"
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React, { FC } from 'react'
+import { SessionProvider } from 'next-auth/react' 
 
-const Provider = () => {
+export interface providerPrompts{
+  children:any;
+  session:any;
+}
+
+const Provider:FC<providerPrompts> = ({children, session}) => {
   return (
-    <div>Provider</div>
+    <SessionProvider session={session}>
+      {children}
+    </SessionProvider>
   )
 }
 

@@ -1,5 +1,6 @@
 import '@/styles/globals.css'
 import Nav from '@components/Nav';
+import Provider from '@components/Provider';
 
 import React, { FC } from 'react'
 
@@ -17,13 +18,17 @@ const RootLayout:FC<RootLayoutPrompts> = ({children}) => {
   return (
     <html lang='en'>
         <body>
-            <div className='main'>
-                <div className='gradient' />
-            </div>
-                <main className='app'>
-                    <Nav />
-                    {children}
-                </main>
+        <Provider session={}>
+            
+        <div className='main'>
+            <div className='gradient' />
+        </div>
+        <main className='app'>
+            <Nav />
+            {children}
+        </main>
+
+        </Provider>
         </body>
     </html>
   )
