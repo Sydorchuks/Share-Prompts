@@ -4,8 +4,8 @@ import React, { FC } from 'react'
 import { SessionProvider } from 'next-auth/react' 
 
 export interface providerPrompts{
-  children:any;
-  session:any;
+  children?:any;
+  session?:any;
 }
 
 const Provider:FC<providerPrompts> = ({children, session}) => {

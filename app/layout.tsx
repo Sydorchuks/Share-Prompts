@@ -18,7 +18,7 @@ const RootLayout:FC<RootLayoutPrompts> = ({children}) => {
   return (
     <html lang='en'>
         <body>
-        <Provider session={}>
+        <Provider>
             
         <div className='main'>
             <div className='gradient' />
